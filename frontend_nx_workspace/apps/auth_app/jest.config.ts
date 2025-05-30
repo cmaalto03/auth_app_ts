@@ -1,8 +1,8 @@
 export default {
-  displayName: 'frontend_nx_workspace',
+  displayName: 'auth_app',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/frontend_nx_workspace',
+  coverageDirectory: '../../coverage/apps/auth_app',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
