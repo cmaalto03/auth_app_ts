@@ -1,5 +1,5 @@
 <header>
-  <form [formGroup]="loginUserForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginUserForm" (ngSubmit)="onLoginSubmit()">
     <h2>Log In</h2>
 
     <label for="username">Username</label>
@@ -10,4 +10,7 @@
 
     <button type="submit">Log in</button>
   </form>
+  @if (errorMessage()) {
+  <p>{{ errorMessage() }}</p>
+  }
 </header>
