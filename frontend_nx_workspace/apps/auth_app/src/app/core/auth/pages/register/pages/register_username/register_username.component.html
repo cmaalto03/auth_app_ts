@@ -1,0 +1,5 @@
+<p>Enter username</p>
+<form [formGroup]="registerUserForm" (ngSubmit)="onUsernameSubmitted()">
+  <input type="username" formControlName="username" />
+  <button><p>Next</p></button>
+</form>
