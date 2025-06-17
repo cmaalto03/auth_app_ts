@@ -1,0 +1,31 @@
+.tab-manager-container {
+  display: flex;
+  width: 100%;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 10px;
+}
+
+.selected-tab {
+  border: solid;
+  border-color: black;
+}
+button {
+  height: 5em;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  margin-right: 40px;
+  width: 100px;
+}
+.inner-button {
+  display: flex;
+  height: 4em;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-tab .inner-button {
+  border-bottom: solid;
+  border-bottom-color: yellow;
+}

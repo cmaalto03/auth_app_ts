@@ -10,4 +10,8 @@ export class UserService {
   public set(user: User): void {
     this.user = user;
   }
+
+  public get(): User | undefined {
+    return <User>this.user;
+  }
 }

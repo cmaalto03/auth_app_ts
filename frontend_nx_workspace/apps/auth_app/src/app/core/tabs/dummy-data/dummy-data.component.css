@@ -1,0 +1,12 @@
+#page-container {
+  display: grid;
+}
+
+.todo {
+  background-color: yellow;
+}
+
+p #loading {
+  background-color: green;
+  height: 100px;
+}

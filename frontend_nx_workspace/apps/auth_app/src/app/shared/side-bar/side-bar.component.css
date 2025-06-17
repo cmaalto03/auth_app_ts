@@ -1,0 +1,16 @@
+.side-bar-container {
+  display: flex;
+  width: 200px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.side-bar-content {
+  margin-top: 10%;
+  position: fixed;
+  border: solid;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 175px;
+}

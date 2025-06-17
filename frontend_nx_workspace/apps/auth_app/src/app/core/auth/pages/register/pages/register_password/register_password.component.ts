@@ -10,6 +10,7 @@ import { UserService } from '../../../../../user.service';
 import { AuthService } from '../../../../auth.service';
 import { LoginModel } from '../../../login/login.model';
 import { User } from '../../../../../user.model';
+import { AuthUser } from '../../../../auth.model';
 
 @Component({
   selector: 'app-register-password',
@@ -43,8 +44,8 @@ export class RegisterPasswordComponent implements OnDestroy {
         )
       )
       .subscribe({
-        next: (user: User) => {
-          this.userService.set(user);
+        next: (response: { user: User; authUser: AuthUser }) => {
+          this.userService.set(response.user);
           this.router.navigate(['/']);
         },
         error: (error: Error) => {

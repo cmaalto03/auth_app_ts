@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 
 import { LoginModel } from './login.model';
 import { User } from '../../../user.model';
+import { AuthUser } from '../../auth.model';
 
 import { AuthService } from '../../auth.service';
 import { UserService } from '../../../user.service';
@@ -33,8 +34,9 @@ export class LoginComponent implements OnDestroy {
     const loginFormObj = this.loginUserForm.value as LoginModel;
 
     this.loginSubscription = this.authService.login(loginFormObj).subscribe({
-      next: (user: User) => {
-        this.userService.set(user);
+      next: (response: { user: User; authUser: AuthUser }) => {
+        this.userService.set(response.user);
+        this.authService.set(response.authUser);
         this.router.navigateByUrl('/');
       },
       error: (error: Error) => {

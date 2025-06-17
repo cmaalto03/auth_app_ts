@@ -1,0 +1,17 @@
+<h1>All Tabs</h1>
+
+<div class="tab-manager-container">
+  @for (tab of tabs; track $index) {
+  <button
+    (click)="selectTab($index)"
+    [ngClass]="{ 'selected-tab': selectedTabIndex === $index }"
+  >
+    <div class="inner-button">
+      <span>{{ tab.title }}</span>
+    </div>
+  </button>
+  }
+</div>
+
+<!-- MAIN CONTENT-->
+<ng-container *ngComponentOutlet="selectedTab.component"></ng-container>

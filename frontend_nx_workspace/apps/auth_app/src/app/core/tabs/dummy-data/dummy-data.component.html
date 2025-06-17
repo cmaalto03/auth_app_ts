@@ -1,0 +1,15 @@
+<div id="page-container">
+  <h2>My Todos:</h2>
+  <ng-container *ngIf="todos$ as todos; else loading">
+    <div *ngFor="let todo of todos | async">
+      <div class="todo">
+        <p>{{ todo.userId }}</p>
+
+        <p>{{ todo.title }}</p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <p id="loading">Loading!</p>
+  </ng-template>
+</div>
